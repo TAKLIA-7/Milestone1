@@ -1,0 +1,6 @@
+patient_name,appoinment_id,appointment_date,consulting_doctor,diagnosing_doctor,diagnosis,medicine_name,quantity,frequency,AF_BF
+"Ravi Kumar",1,"2026-04-28 10:00:00","Dr. Mehta","Dr. Mehta",Fever,Paracetamol,10,2xd,AF
+"Ravi Kumar",1,"2026-04-28 10:00:00","Dr. Mehta","Dr. Rao","Skin Allergy",Antihistamine,5,1xd,BF
+"Ravi Kumar",1,"2026-04-28 10:00:00","Dr. Mehta","Dr. Iyer","Eye Irritation",EyeDrops,7,3xd,AF
+"Anjali Sharma",2,"2026-04-28 11:00:00","Dr. Mehta","Dr. Mehta","Cold and Cough",CoughSyrup,6,2xd,AF
+"Kiran Shetty",3,"2026-04-28 12:00:00","Dr. Rao","Dr. Rao",Acne,AcneCream,4,1xd,BF
