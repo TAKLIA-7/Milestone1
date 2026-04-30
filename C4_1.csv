@@ -1,0 +1,6 @@
+diagnosis_id,appoinment_id,doctor_id,description
+8,6,4,Fever
+7,5,4,Fever
+6,4,4,Fever
+5,3,5,Acne
+4,2,4,"Cold and Cough"
