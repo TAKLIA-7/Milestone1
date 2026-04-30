@@ -10,6 +10,16 @@ CREATE TABLE doctor(
     doctor_name VARCHAR(50),
     doctor_specialization VARCHAR(50)
 );
+alter table doctor
+add column department_id int ,
+add constraint fk_department
+foreign key(department_id) references department(department_id);
+
+create table department(
+department_id int primary key auto_increment,
+department_name varchar(30));
+
+
 
 CREATE TABLE appoinment(
     appoinment_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -78,6 +88,32 @@ INSERT INTO doctor (doctor_name, doctor_specialization) VALUES
 ('Dr. Mehta', 'General Physician'),
 ('Dr. Rao', 'Dermatologist'),
 ('Dr. Iyer', 'Ophthalmologist');
+
+INSERT INTO department (department_name) VALUES
+('General Medicine'),
+('Dermatology'),
+('Ophthalmology');
+
+UPDATE doctor
+SET department_id = (
+    SELECT department_id FROM department 
+    WHERE department_name = 'General Medicine'
+)
+WHERE doctor_specialization = 'General Physician';
+
+UPDATE doctor
+SET department_id = (
+    SELECT department_id FROM department 
+    WHERE department_name = 'Dermatology'
+)
+WHERE doctor_specialization = 'Dermatologist';
+
+UPDATE doctor
+SET department_id = (
+    SELECT department_id FROM department 
+    WHERE department_name = 'Ophthalmology'
+)
+WHERE doctor_specialization = 'Ophthalmologist';
 
 INSERT INTO appoinment (patient_id, doctor_id, date) VALUES
 (1, 4, '2026-04-28 10:00:00'),
